@@ -1,6 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import React, {useState} from 'react';
+import axios from "axios"
+import Logo from '../components/Logo';
+import Brief from '../components/Brief';
 
 function Main() {
     const [input, SetInput] = useState({
@@ -20,11 +23,30 @@ function Main() {
     }
     function handleClick(e) {
         e.preventDefault();
-        console.log(input)
+        const newUser = {
+            name: input.name,
+            number: input.number,
+            sign: input.sign
+        }
+   
+        axios.post('http://localhost:4000/zodiacsms', newUser)
+            .then(function (response) {
+           
+            console.log(response);
+          }).catch(function (error) {
+           
+            console.log(error);
+          }).then(function () {
+           
+          });
+
     }
 
   return (
-    <Form>
+    <>
+    <Logo />
+    <Brief />
+    <Form className='form'>
         <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Name</Form.Label>
         <Form.Control name="name" type="text" value={input.name} placeholder="Name" onChange={handleChange}/>
@@ -35,7 +57,7 @@ function Main() {
         <Form.Label>Phone Number</Form.Label>
         <Form.Control name="number" type="text" value={input.number} placeholder="Enter your Phone Number" onChange={handleChange}/>
         <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
+          We'll never share your phone number with anyone else.
         </Form.Text>
       </Form.Group>
 
@@ -48,6 +70,7 @@ function Main() {
         Submit
       </Button>
     </Form>
+    </>
   );
 }
 
