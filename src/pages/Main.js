@@ -39,8 +39,10 @@ function Main() {
           }).then(function () {
            
           });
+          alert("Check your phone for a verification text")
 
     }
+
 
   return (
     <>
@@ -55,7 +57,7 @@ function Main() {
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Phone Number</Form.Label>
-        <Form.Control name="number" type="text" value={input.number} placeholder="Enter your Phone Number" onChange={handleChange}/>
+        <Form.Control name="number" type="text" value={input.number} placeholder="Number" onChange={handleChange}/>
         <Form.Text className="text-muted">
           We'll never share your phone number with anyone else.
         </Form.Text>
@@ -66,7 +68,7 @@ function Main() {
         <Form.Control name="sign" type="text" value={input.sign} placeholder="Sign" onChange={handleChange}/>
       </Form.Group>
     
-      <Button variant="primary" type="submit" onClick={handleClick}>
+      <Button variant="primary" type="submit" onClick={handleClick} >
         Submit
       </Button>
     </Form>

@@ -26,6 +26,10 @@ p{
   margin-left: 2%;
   margin-right: 2%;
 }
+.brief{
+  display: flex;
+  justify-content: center;
+}
 .home-link{
   font-size: 50px;
   color: gold;
@@ -63,9 +67,9 @@ p{
   border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
   border-image-slice: 1;
   height: 300px;
-  margin: 20px auto;
+  margin: auto;
   width: 500px;
-  
+  padding-top: 3%;
   
 }
 .mb-3{
