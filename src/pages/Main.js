@@ -68,7 +68,7 @@ function Main() {
         <Form.Control name="sign" type="text" value={input.sign} placeholder="Sign" onChange={handleChange}/>
       </Form.Group>
     
-      <Button variant="primary" type="submit" onClick={handleClick} >
+      <Button className="btn" variant="primary" type="submit" onClick={handleClick} >
         Submit
       </Button>
     </Form>
