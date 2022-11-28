@@ -29,7 +29,7 @@ function Main() {
             sign: input.sign
         }
    
-        axios.post('http://localhost:4000/zodiacsms', newUser)
+        axios.post('https://zodiacsms.herokuapp.com/zodiacsms', newUser)
             .then(function (response) {
            
             console.log(response);

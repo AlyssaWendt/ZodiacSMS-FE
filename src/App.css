@@ -51,7 +51,7 @@ p{
 
 }
 .home-link:hover {
-  color: goldenrod;
+  color: gold;
   
   text-shadow:
   0 0 7px #fff,
@@ -77,8 +77,6 @@ p{
   flex-direction: column;
   align-items: center;
   border: 1px solid rgb(246,255,0);
-  
-
   box-shadow:
   0 0 7px #fff,
   0 0 42px gold,
